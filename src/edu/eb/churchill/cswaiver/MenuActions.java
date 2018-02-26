@@ -3,12 +3,12 @@ package edu.eb.churchill.cswaiver;
 import java.util.Random;
 
 // Static class to perform all menu actions outilned in the project specification
-public class MenuActions {
+public  class MenuActions {
 
     // Problem # - 1
     // Given tow strings, concatinate with smaller string on both sides of longer string
     // example aa, ccc are two strings then output should be aacccaa
-    private String comboString(String str1, String str2)
+    public static  String comboString(String str1, String str2)
     {
         if (str1 == null || str2 == null)
         {
@@ -47,7 +47,7 @@ public class MenuActions {
     }
 
     // Problem # 2
-    public boolean nearHunderd(int n) {
+    public static  boolean nearHunderd(int n) {
 
         // log
         System.out.println("Input Number provided - "+n);
@@ -66,7 +66,7 @@ public class MenuActions {
 
 
     // Problem # - 3
-    public int sumDouble(int a, int b)
+    public static  int sumDouble(int a, int b)
     {
         System.out.println("Method - sumDouble");
         System.out.println("Input Numbers Provided "+a+" , "+b);
@@ -82,9 +82,9 @@ public class MenuActions {
     }
 
     // Problem # - 4
-    public int sumNumbers(int a)
+    public static  int sumNumbers(int a)
     {
-        int totalSum;
+        int totalSum=0;
 
         // method to sum numbers 1..n
         for (int i = 0; i<= a; ++i)
@@ -94,7 +94,7 @@ public class MenuActions {
     }
 
     // Problem # - 5
-    public double getBMI(double height, double weight)
+    public static  double getBMI(double height, double weight)
     {
         // BMI formula = weight * 703 / height2
         double bmi;
@@ -104,7 +104,7 @@ public class MenuActions {
     }
 
     // Problem # - 6
-    public double Fahrenheit(double celsius)
+    public static  double Fahrenheit(double celsius)
     {
         // formula is 9c = 5f - 160
         // also can be written as f = (9c+160)/5
@@ -115,7 +115,7 @@ public class MenuActions {
     }
 
     // Problem # - 7
-    public void flipCoin()
+    public static  void flipCoin()
     {
         int head = 1;
         int tail = 0;
@@ -137,7 +137,7 @@ public class MenuActions {
     }
 
     // Problem # - 8
-    public int sumDigits(int a)
+    public static  int sumDigits(int a)
     {
         // sum each of digits to return total
         int totalSum=0;
@@ -154,7 +154,7 @@ public class MenuActions {
     }
 
     // Problem # - 9
-    public vid thankYouMessage()
+    public static  void thankYouMessage()
     {
         System.out.println("!!! Thank You for Playing with my first Java Program ... Enjoy Coding!!");
     }

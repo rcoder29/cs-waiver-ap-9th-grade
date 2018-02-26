@@ -28,32 +28,51 @@ public class MainMenu {
     }
 
     // perform action
-    private void performMenuAction(int actionSelected)
+    private void performMenuAction(int actionSelected, Console c)
     {
         System.out.println("Action selected - "+actionSelected);
         switch(actionSelected) {
-
             case 1:
+                // prompt for new inputs to enter
+                System.out.println("Enter Two Input Strings combine - ");
+                System.out.print("Enter String1 : ");
+                String str1 = c.readLine();
+                System.out.print("Enter String2 : ");
+                String str2 = c.readLine();
+                System.out.println("User Input : string1:" + str1 + " ; string2: "+ str2);
+                String comboStr = MenuActions.comboString(str1,str2);
+                System.out.println("Combo String - "+comboStr);
+                break;
 
             case 2:
+                break;
 
             case 3:
+                break;
 
             case 4:
+                break;
 
             case 5:
+                break;
 
             case 6:
+                break;
 
             case 7:
+                break;
 
             case 8:
+                break;
 
             case 9:
+                // Thank for using the program and return
+                MenuActions.thankYouMessage();
+                break;
 
             default:
                 System.out.println("Invalid Input Choice - "+actionSelected);
-                System.out.println("Select a value between 1 to 9 to perform appropriate action, Please try again ...")
+                System.out.println("Select a value between 1 to 9 to perform appropriate action, Please try again ...");
         }
     }
 
@@ -82,12 +101,12 @@ public class MainMenu {
             System.out.println("User Input Option - " + userInput);
             int actionSelected = new Integer(userInput).intValue();
 
+            // Perform Action
+            mainMenu.performMenuAction(actionSelected,c);
+
             // exit if selection is option 9
             if(actionSelected == 9)
                 break;  // break infinite loop
-
-            // Perform Action
-            mainMenu.performMenuAction(actionSelected);
         }
 
         // exit program on an option selection that quits the show Options MainMenu!
