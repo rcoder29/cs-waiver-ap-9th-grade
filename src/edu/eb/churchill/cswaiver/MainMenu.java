@@ -16,15 +16,16 @@ public class MainMenu {
         System.out.println("===================================");
         System.out.println("Please Select from the Following : ");
         System.out.println("1 - ComboString Function");
-        System.out.println("2 - Perform Action 2");
-        System.out.println("3 - Perform Action 3");
-        System.out.println("4 - Perform Action 4");
-        System.out.println("5 - Perform Action 5");
-        System.out.println("6 - Perform Action 6");
-        System.out.println("7 - Perform Action 7");
-        System.out.println("8 - Perform Action 8");
-        System.out.println("9 - Perform Action 9");
+        System.out.println("2 - Near Hundred Function");
+        System.out.println("3 - Sum Double Function");
+        System.out.println("4 - Sum Numbers Function");
+        System.out.println("5 - Get BMI Function");
+        System.out.println("6 - Fahrenheit Function");
+        System.out.println("7 - Flip Coin Function");
+        System.out.println("8 - Sum Digits Function");
+        System.out.println("9 - Thank You & Exit Function");
         System.out.println("===================================");
+        System.out.print("Enter Menu Choice : ");
     }
 
     // perform action
@@ -63,7 +64,7 @@ public class MainMenu {
                 System.out.print("Enter Value2 : ");
                 str2 = c.readLine();
                 inputNumber1 = new Integer(str1).intValue();
-                inputNumber2= new Integer(str1).intValue();
+                inputNumber2= new Integer(str2).intValue();
                 int sumDoubleVal = MenuActions.sumDouble(inputNumber1, inputNumber2);
                 System.out.println("User Input : Number1:" + str1 + " ; Number2: "+ str2);
                 System.out.println("Sum Double - "+sumDoubleVal);
@@ -83,13 +84,13 @@ public class MainMenu {
 
             case 5:
                 //getBMI
-                System.out.println("Enter Two Input Numbers for sumDouble - ");
+                System.out.println("Enter Two Input Numbers for getBMI - ");
                 System.out.print("Enter Height : ");
                 str1 = c.readLine();
                 System.out.print("Enter Weight : ");
                 str2 = c.readLine();
                 double height = new Double(str1).doubleValue();
-                double weight = new Double(str1).doubleValue();
+                double weight = new Double(str2).doubleValue();
                 double bmi = MenuActions.getBMI(height, weight);
                 System.out.println("User Input : Height:" + str1 + " ; Weight: "+ str2);
                 System.out.println("BMI - "+bmi);
@@ -98,7 +99,7 @@ public class MainMenu {
             case 6:
                 //Fahrenheit
                 // prompt for new inputs to enter
-                System.out.println("Enter Input for sumNumbers - ");
+                System.out.println("Enter Input for Fahrenheit - ");
                 System.out.print("Enter Value : ");
                 str1 = c.readLine();
                 double celcius = new Double(str1).doubleValue();
@@ -161,6 +162,8 @@ public class MainMenu {
 
             // Perform Action
             mainMenu.performMenuAction(actionSelected,c);
+            System.out.println();
+            System.out.println();
 
             // exit if selection is option 9
             if(actionSelected == 9)
