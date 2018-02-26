@@ -1,0 +1,4 @@
+Unit 6: Using randomness in programs
+•	Discuss the concept of randomness in a program
+•	Introduce the Random class to generate “pseudorandom” values in a program
+•	Create a “formula” to generate random int values in a specified range
