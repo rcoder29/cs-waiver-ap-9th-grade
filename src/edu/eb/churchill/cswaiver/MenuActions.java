@@ -53,7 +53,7 @@ public  class MenuActions {
         System.out.println("Input Number provided - "+n);
 
         // return true if value is between 10 to 100
-        if (n >= 10 && n <+ 100) {
+        if (n >= 10 && n <= 100) {
             System.out.println("near Hundred output - true");
             return true;
         }

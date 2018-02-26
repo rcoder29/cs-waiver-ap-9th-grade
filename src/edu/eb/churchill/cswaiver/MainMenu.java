@@ -31,38 +31,96 @@ public class MainMenu {
     private void performMenuAction(int actionSelected, Console c)
     {
         System.out.println("Action selected - "+actionSelected);
+        String str1, str2;
+        int inputNumber1, inputNumber2;
         switch(actionSelected) {
             case 1:
                 // prompt for new inputs to enter
                 System.out.println("Enter Two Input Strings combine - ");
                 System.out.print("Enter String1 : ");
-                String str1 = c.readLine();
+                str1 = c.readLine();
                 System.out.print("Enter String2 : ");
-                String str2 = c.readLine();
+                str2 = c.readLine();
                 System.out.println("User Input : string1:" + str1 + " ; string2: "+ str2);
                 String comboStr = MenuActions.comboString(str1,str2);
                 System.out.println("Combo String - "+comboStr);
                 break;
 
             case 2:
+                // prompt for new inputs to enter
+                System.out.println("Enter Input Number for Near Hundred check - ");
+                System.out.print("Enter Input Number : ");
+                str1 = c.readLine();
+                inputNumber1 = new Integer(str1).intValue();
+                MenuActions.nearHunderd(inputNumber1);
                 break;
 
             case 3:
+                // prompt for new inputs to enter
+                System.out.println("Enter Two Input Numbers for sumDouble - ");
+                System.out.print("Enter Value1 : ");
+                str1 = c.readLine();
+                System.out.print("Enter Value2 : ");
+                str2 = c.readLine();
+                inputNumber1 = new Integer(str1).intValue();
+                inputNumber2= new Integer(str1).intValue();
+                int sumDoubleVal = MenuActions.sumDouble(inputNumber1, inputNumber2);
+                System.out.println("User Input : Number1:" + str1 + " ; Number2: "+ str2);
+                System.out.println("Sum Double - "+sumDoubleVal);
                 break;
 
             case 4:
+                // sumNumbers
+                // prompt for new inputs to enter
+                System.out.println("Enter Input for sumNumbers - ");
+                System.out.print("Enter Value : ");
+                str1 = c.readLine();
+                inputNumber1 = new Integer(str1).intValue();
+                int sumNumbersVal = MenuActions.sumNumbers(inputNumber1);
+                System.out.println("User Input : Number:" + str1);
+                System.out.println("Sum Numbers - "+sumNumbersVal);
                 break;
 
             case 5:
+                //getBMI
+                System.out.println("Enter Two Input Numbers for sumDouble - ");
+                System.out.print("Enter Height : ");
+                str1 = c.readLine();
+                System.out.print("Enter Weight : ");
+                str2 = c.readLine();
+                double height = new Double(str1).doubleValue();
+                double weight = new Double(str1).doubleValue();
+                double bmi = MenuActions.getBMI(height, weight);
+                System.out.println("User Input : Height:" + str1 + " ; Weight: "+ str2);
+                System.out.println("BMI - "+bmi);
                 break;
 
             case 6:
+                //Fahrenheit
+                // prompt for new inputs to enter
+                System.out.println("Enter Input for sumNumbers - ");
+                System.out.print("Enter Value : ");
+                str1 = c.readLine();
+                double celcius = new Double(str1).doubleValue();
+                double fahrenheit = MenuActions.Fahrenheit(celcius);
+                System.out.println("Fahrenheit Output :"+fahrenheit);
                 break;
 
             case 7:
+                //flipCoin
+                MenuActions.flipCoin();
                 break;
 
             case 8:
+                //sumDigits
+                // prompt for new inputs to enter
+                System.out.println("Enter Input for sumDigits - ");
+                System.out.print("Enter Value : ");
+                str1 = c.readLine();
+                inputNumber1 = new Integer(str1).intValue();
+                int sumDigitsVal = MenuActions.sumDigits(inputNumber1);
+                System.out.println("User Input : Number:" + str1);
+                System.out.println("Sum Digits Output - "+sumDigitsVal);
                 break;
 
             case 9:
